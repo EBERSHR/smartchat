@@ -1,0 +1,68 @@
+.avatar {
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+img {
+    object-fit: fill;
+}
+
+/* *{margin: 0; padding: 0;} */
+.caja{
+  /* display: flex;
+  flex-flow: column wrap; */
+  justify-content: center;
+  align-items: center;
+  /* background: #333944; */
+  border-radius: 50%;
+}
+.box{
+  width: 100px;
+  height: 50px;
+  /* background: #CCC; */
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.box img{
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+}
+/* @supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+} */
+
+.userDataComponent {
+    display: flex;
+    flex-direction: row;
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 1px;
+    width: 300px;
+}
+
+.chatComponent {
+    display: flex;
+    flex-direction: row;
+}
+
+.messagesComponent {
+    display: flex;
+    flex-direction: column;
+}
+
+.senderMessageComponent {
+
+}
+
+.messageComponent {
+    display: flex;
+    flex-direction: row;
+}
