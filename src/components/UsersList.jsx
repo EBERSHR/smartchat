@@ -22,6 +22,8 @@ export default function UsersList() {
                         key={element.id}
                         image={element.image}
                         name={element.user}
+                        id={element.id}
+                        chat={element.chat}
                     />
                 )
             })}

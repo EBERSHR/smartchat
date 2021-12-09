@@ -1,10 +1,14 @@
 import {
-CHOOSE_USER, GET_USERS_DATABASE
+CHOOSE_USER, GET_USERS_DATABASE, SEND_MESSAGE
 } from "../actions";
 
 const initialState = {
     users: [],
-    choosed: {}
+    choosed: {},
+    loggedUser: {
+        name: "Eber",
+        id: 5 
+    }
 }
 
 export default function rootReducer(state = initialState, action) {
@@ -20,7 +24,13 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 choosed: action.payload
             }
+        
+        case SEND_MESSAGE:
+            return {
+                ...state
+            }    
 
         default: return state
     }
+
 }

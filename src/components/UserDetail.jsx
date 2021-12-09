@@ -18,7 +18,7 @@ export default function UserDetail() {
                     <img src={user.image} alt="usuario" />
                     </div>
                 </div>
-                <h5></h5>
+                <h5>{user.name}</h5>
 
             </div>
         </div>
