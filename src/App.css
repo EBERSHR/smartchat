@@ -40,3 +40,12 @@
 .messageDiv {
   text-align: right;
 }
+
+.messageArea {
+  background-color: aqua;
+  max-height: 280px;
+  min-height: 280px;
+  padding-right: 10px;
+  max-width: 300px;
+  overflow: scroll;
+}
