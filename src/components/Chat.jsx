@@ -1,6 +1,6 @@
 import React from 'react'
 import Messages from './Messages';
-import UserData from './UserData';
+import UserDetail from './UserDetail';
 import UsersList from './UsersList';
 import SenderMessage from './SenderMessage';
 
@@ -9,7 +9,7 @@ export default function Chat() {
         <div className="chatComponent">
             <UsersList />
             <div className="messagesComponent">
-                <UserData />
+                <UserDetail />
                 <Messages />
                 <SenderMessage />
             </div>

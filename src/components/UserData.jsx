@@ -2,29 +2,17 @@ import React from 'react';
 import './styles/userdata.css';
 import { useDispatch } from 'react-redux';
 import { chooseUser } from '../actions';
-import { useSelector } from 'react-redux';
-
-
-
 
 
 export default function UserData(props) {
+
     const dispatch = useDispatch();
-    const user = useSelector(state => state.choosed)
-
-    console.log(user)
-
-
-
-
-
-
+    const setUser = () => {
+        dispatch(chooseUser(props));
+    }
 
     return (
-        <div className="userDataComponent" onClick={() => {dispatch(chooseUser(props))}}>
-            {/* <div className="avatar">
-                <img src={props.image} alt="imagen del usuario" />
-            </div> */}
+        <div className="userDataComponent" onClick={setUser}>
             <div className="caja">
                 <div className="box">
                 <img src={props.image} alt="imagen del usuario" />

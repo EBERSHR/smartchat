@@ -1,9 +1,19 @@
-import React from 'react'
-import users from '../data/users.json'
-import UserData from './UserData'
+import React, { useEffect } from 'react';
+import UserData from './UserData';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUsersDatabase } from '../actions';
 
 
 export default function UsersList() {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getUsersDatabase());
+    }, [dispatch]);
+
+    const users = useSelector(state => state.users)
+
     return (
         <div>
             {users.map(element => {
