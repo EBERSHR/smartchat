@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendMessage } from '../actions';
-import { useEffect } from 'react';
-import { getMessages } from '../actions'; 
 
 export default function SenderMessage() {
 
@@ -12,10 +10,6 @@ export default function SenderMessage() {
 
     const receiver = useSelector(state => state.choosed.id);
 
-    // useEffect(() => {
-    //     dispatch(getMessages(receiver))
-    // }, [dispatch])
-
     const handleOnChange = (e) => {
         setMessage(e.target.value)
     }
@@ -24,7 +18,8 @@ export default function SenderMessage() {
             message,
             from: logged.id,
             to: receiver
-        }))
+        }));
+        setMessage('');
     }
     return (
         <div className="senderMessageComponent">
