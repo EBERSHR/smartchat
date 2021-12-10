@@ -13,9 +13,7 @@ export default function UsersList() {
     }, [dispatch]);
 
     const users = useSelector(state => state.users);
-
-    console.log(users)
-
+    
     return (
         <div className='listComponent'>
             {users.map(element => {

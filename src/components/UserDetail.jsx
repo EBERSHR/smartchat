@@ -1,16 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-// import { getMessages } from '../actions'; 
+import { useSelector } from 'react-redux';
+
 
 export default function UserDetail() {
 
     const user = useSelector(state => state.choosed)
-    // const dispatch = useDispatch();
-
-    // useEffect(() => {
-    //     dispatch(getMessages(user.id))
-    // }, [dispatch])
 
     return (
         <div>
