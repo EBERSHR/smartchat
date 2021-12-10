@@ -21,12 +21,21 @@ export default function SenderMessage() {
         }));
         setMessage('');
     }
+
+    const handleKeyPress = e => {
+      if (e.keyCode === 13) {
+        handleOnClick();
+      }
+    };
+
+
     return (
         <div className="senderMessageComponent">
             <dir className="messageComponent">
-                <input type="text" onChange={e => {handleOnChange(e)}}/>
+                <input type="text" value={message} onChange={e => {handleOnChange(e)}} onKeyDown={e => {handleKeyPress(e)}} defaultValue={message} />
                 <div>
-                    <input type="button" value="Send" onClick={handleOnClick}/>
+                {/* <input type="button" value="Send" onClick={handleOnClick}/> */}
+                <input type="button" value="Send" onClick={handleOnClick}/>
                 </div>
             </dir>
         </div>

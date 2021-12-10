@@ -12,10 +12,12 @@ export default function UsersList() {
         dispatch(getUsersDatabase());
     }, [dispatch]);
 
-    const users = useSelector(state => state.users)
+    const users = useSelector(state => state.users);
+
+    console.log(users)
 
     return (
-        <div>
+        <div className='listComponent'>
             {users.map(element => {
                 return(
                     <UserData 

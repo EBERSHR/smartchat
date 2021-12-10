@@ -42,10 +42,15 @@
 }
 
 .messageArea {
-  background-color: aqua;
+  background-color: rgb(191, 215, 245);
   max-height: 280px;
   min-height: 280px;
   padding-right: 10px;
   max-width: 300px;
+  overflow: scroll;
+}
+
+.listComponent {
+  max-height: 400px;
   overflow: scroll;
 }
