@@ -14,7 +14,6 @@ export const getMessages = (id) => {
 
     return (dispatch) => {
         onValue(ref(database, `/otro/${id}/chat/`), (snapshot) => {
-            console.log('MESSAGES', snapshot.val())
             dispatch({
                 type: GET_MESSAGES,
                 payload: snapshot.val()
